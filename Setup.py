@@ -3,7 +3,7 @@ import sys
 from io import BytesIO
 from zipfile import BadZipFile, ZipFile
 
-print("Welcome to SimpleMiner Cli! Let's get you started shall we!\n\n")
+print("Welcome to BetterMiner Cli! Let's get you started shall we!\n\n")
 
 try:
     import colorama
