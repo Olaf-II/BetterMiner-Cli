@@ -11,3 +11,11 @@ If you do not have Python installed already:
 - Go to https://python.org/downloads and download version 3.9.9
 - When installing, ensure you tick the box "Add to path" so it is automatically added to path.
 - You can start mining!
+
+
+**CHANGELOG**
+- 2Miners support
+- Improved menu's
+- Code cleanup
+- Fixed bugs
+- Added ASCII art more

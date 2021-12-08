@@ -2,7 +2,8 @@ import os
 import json
 import sys
 import webbrowser
-from Tools.CommonFunctions import PrintASCII
+sys.path.append('./Tools')
+from CommonFunctions import PrintASCII
 
 try:
     from colorama import Fore, Back, init
@@ -15,23 +16,26 @@ init()
 
 def getOption():
     PrintASCII()
-    return input(f"{Fore.CYAN}What would you like to do?\n\n{Fore.LIGHTWHITE_EX}1 - Unmineable Menu\n2 - 2Miners Menu\n3 - Support Server\n4 - Close\n\n{Fore.CYAN}Enter the corresponding number > {Fore.LIGHTWHITE_EX}")
+    return input(f"{Fore.CYAN}What would you like to do?\n\n{Fore.LIGHTWHITE_EX}1 - Start Mining\n2 - Add Wallet\n3 - Support Server\n5 - Main Menu\n6 - Close\n\n{Fore.CYAN}Enter the corresponding number > {Fore.LIGHTWHITE_EX}")
 
 option = getOption()
 
 if option == "1":
     os.system('cls' if os.name in ('nt', 'dos') else 'clear')
-    os.system('python ./Tools/Functions/UnmineableMenu.py')
+    os.system('python ./Tools/Functions/2MinersMine.py')
 elif option == "2":
     os.system('cls' if os.name in ('nt', 'dos') else 'clear')
-    os.system('python ./Tools/Functions/2MinersMenu.py')
+    os.system('python ./Tools/Functions/2MinersAddWallet.py')
 elif option == "3":
     os.system('cls' if os.name in ('nt', 'dos') else 'clear')
     webbrowser.open_new('https://discord.gg/NcdwKWrA5C')
     os.system('python ./Start.py')
 elif option == "4":
+    os.system('cls' if os.name in ('nt', 'dos') else 'clear')
+    os.system('python ./Start.py')
+elif option == "5":
     sys.exit()
 else:
-    print(Fore.LIGHTRED_EX + "Invalid Option" + Fore.LIGHTBLACK_EX)
-    input("\n\nPress Enter to Continue...")
+    print(f"{Fore.LIGHTRED_EX}Invalid Option")
+    input(f"\n\n{Fore.LIGHTBLACK_EX}Press Enter to Continue...")
     os.system('python ./Start.py')
